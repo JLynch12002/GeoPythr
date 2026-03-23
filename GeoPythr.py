@@ -37,9 +37,11 @@ def initialise_session(location_order, round_num):
 
 # Initialise first game
 if "pending_guess" not in st.session_state:
+    # randomly shuffling location order so that 1) it's random everytime and 2) it avoids repeats
     st.session_state.round_num = 0
     st.session_state.location_order = list(range(len(locations)))
     random.shuffle(st.session_state.location_order)
+    
     initialise_session(st.session_state.location_order,
                        st.session_state.round_num)
 
