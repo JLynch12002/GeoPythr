@@ -52,7 +52,7 @@ st.write("""
 
     Plot your guess on the map below.
 """)
-st.image(st.session_state.location["image"], use_container_width=True)
+st.image(st.session_state.location["image"], width="stretch")
 
 # Build map
 map = folium.Map(location=st.session_state.map_center,
@@ -93,7 +93,7 @@ left_col, right_col = st.columns(2)
 
 # Confirm guess button
 with left_col:
-    if st.button("Confirm Guess", use_container_width=True):
+    if st.button("Confirm Guess", width="stretch"):
         if st.session_state.pending_guess:
             st.session_state.confirmed_guess = st.session_state.pending_guess
             st.rerun()
@@ -108,7 +108,7 @@ with left_col:
             f"Your guess was {distance:.2f} km away", text_alignment="center")
 
         with right_col:
-            if st.button("Next Round", use_container_width=True):
+            if st.button("Next Round", width="stretch"):
                 st.session_state.round_num += 1
                 initialise_session(
                     st.session_state.location_order, st.session_state.round_num)
