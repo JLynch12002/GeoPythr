@@ -9,6 +9,6 @@ After each round you are given the option to begin another. If you wish to end t
 ## Set-up
 To run GeoPythr, ensure you have installed all the required python libraries with <code>pip install -r requirements.txt</code> or <code>pip3 install -r requirements.txt</code>
 
-To begin running the streamlit server, enter <code>streamlit run GeoPythr.py</code> into the terminal. This will open a new tab in your internet browser with the game.
+To begin running the streamlit server, enter <code>python3 -m streamlit run GeoPythr.py</code> into the terminal. This will open a new tab in your internet browser with the game.
 
 To exit GeoPythr, return back to the terminal and press <code>Control + c</code> to end the Streamlit server. 

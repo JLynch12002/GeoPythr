@@ -46,7 +46,7 @@ if "pending_guess" not in st.session_state:
                        st.session_state.round_num)
 
 # Streamlit webpage
-st.title("GeoPythr", text_alignment="center", width="stretch")
+st.title("GeoPythr", width="stretch")
 st.write("""
     Welcome to GeoPythr, an attempt at recreating GeoGuessr using Python.
 
@@ -107,7 +107,7 @@ with left_col:
         distance = calculate_dist(st.session_state.confirmed_guess, [
             st.session_state.location["lat"], st.session_state.location["lng"]])
         st.text(
-            f"Your guess was {distance:.2f} km away", text_alignment="center")
+            f"Your guess was {distance:.2f} km away")
 
         with right_col:
             if st.button("Next Round", width="stretch"):
